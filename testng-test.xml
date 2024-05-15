@@ -1,0 +1,7 @@
+<suite name="Application Test">
+	<test name="Regression Test">
+		<classes>
+			<class name="com.makemytrip.flightsbooking.HomePageTest"></class>
+		</classes>
+	</test>
+</suite>
