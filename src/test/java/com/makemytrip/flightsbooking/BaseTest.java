@@ -6,14 +6,16 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
 
 public class BaseTest {
 
 	WebDriver driver;
 
 	@BeforeMethod
-	public void beforeMethod() {
-		driver = new ChromeDriver();
+	@Parameters({"browser"})
+	public void beforeMethod(String browser) {
+		driver = WebDriverFactory.getInstance().getDriver(browser);
 		new BaseWindow(driver);
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
@@ -23,6 +25,7 @@ public class BaseTest {
 	@AfterMethod
 	public void afterMethod() {
 //		driver.quit();
+		WebDriverFactory.getInstance().quitDriver();
 	}
 
 }

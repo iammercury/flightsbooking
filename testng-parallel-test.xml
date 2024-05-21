@@ -1,0 +1,18 @@
+<suite name="Application Test" parallel= "tests">
+	<test name="Firefox Test">
+		<parameters>
+			<parameter name="browser" value="firefox"></parameter>
+		</parameters>
+		<classes>
+			<class name="com.makemytrip.flightsbooking.HomePageTest"></class>
+		</classes>
+	</test>
+	<test name="Chrome Test">
+		<parameters>
+			<parameter name="browser" value="chrome"></parameter>
+		</parameters>
+		<classes>
+			<class name="com.makemytrip.flightsbooking.HomePageTest"></class>
+		</classes>
+	</test>
+</suite>

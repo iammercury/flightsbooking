@@ -1,5 +1,8 @@
 <suite name="Application Test">
 	<test name="Regression Test">
+		<parameters>
+			<parameter name="browser" value="chrome"></parameter>
+		</parameters>
 		<classes>
 			<class name="com.makemytrip.flightsbooking.HomePageTest"></class>
 		</classes>
