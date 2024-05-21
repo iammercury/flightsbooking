@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-05-06T20:05:39 IST" name="Default suite" finished-at="2024-05-06T20:05:59 IST" duration-ms="19721">
+  <suite started-at="2024-05-21T18:11:25 IST" name="Default suite" finished-at="2024-05-21T18:11:32 IST" duration-ms="6527">
     <groups>
     </groups>
-    <test started-at="2024-05-06T20:05:39 IST" name="Default test" finished-at="2024-05-06T20:05:59 IST" duration-ms="19721">
+    <test started-at="2024-05-21T18:11:25 IST" name="Default test" finished-at="2024-05-21T18:11:32 IST" duration-ms="6527">
       <class name="com.makemytrip.flightsbooking.HomePageTest">
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.makemytrip.flightsbooking.HomePageTest@52719fb6]" started-at="2024-05-06T20:05:39 IST" name="beforeMethod" finished-at="2024-05-06T20:05:45 IST" duration-ms="5983" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.makemytrip.flightsbooking.HomePageTest@4b45a2f5]" started-at="2024-05-21T18:11:25 IST" name="beforeMethod" finished-at="2024-05-21T18:11:29 IST" duration-ms="4037" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="testCaseOne()[pri:0, instance:com.makemytrip.flightsbooking.HomePageTest@52719fb6]" started-at="2024-05-06T20:05:45 IST" name="testCaseOne" finished-at="2024-05-06T20:05:59 IST" duration-ms="13704" status="PASS">
+        <test-method signature="testCaseOne()[pri:0, instance:com.makemytrip.flightsbooking.HomePageTest@4b45a2f5]" started-at="2024-05-21T18:11:29 IST" name="testCaseOne" finished-at="2024-05-21T18:11:32 IST" duration-ms="2449" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testCaseOne -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.makemytrip.flightsbooking.HomePageTest@52719fb6]" started-at="2024-05-06T20:05:59 IST" name="afterMethod" finished-at="2024-05-06T20:05:59 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.makemytrip.flightsbooking.HomePageTest@4b45a2f5]" started-at="2024-05-21T18:11:32 IST" name="afterMethod" finished-at="2024-05-21T18:11:32 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
