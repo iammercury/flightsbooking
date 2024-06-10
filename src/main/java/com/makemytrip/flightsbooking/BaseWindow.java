@@ -467,7 +467,7 @@ public class BaseWindow {
 
 		// Switch to the latest window (top of the stack)
 		driver.switchTo().window(windowStack.peek());
-		wait.until(ExpectedConditions.javaScriptThrowsNoExceptions("return document.readyState;"));
+		wait.until(ExpectedConditions.jsReturnsValue("return document.readyState === 'complete'"));
 		log.info("Switched to window- " + driver.getTitle());
 	}
 
