@@ -6,7 +6,7 @@
       <class name="com.makemytrip.flightsbooking.HomePageTest">
         <methods>
           <include name="beforeMethod"/>
-          <include name="testCaseOne"/>
+          <include name="clickGooglePlayStore"/>
           <include name="afterMethod"/>
         </methods>
       </class> <!-- com.makemytrip.flightsbooking.HomePageTest -->

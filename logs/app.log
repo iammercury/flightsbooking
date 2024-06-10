@@ -1,2 +1,5 @@
-19:09:04.891 INFO  flightsbooking.HomePage - Entered Hyderabad in the From field
-19:09:05.798 INFO  flightsbooking.HomePage - Entered Indore in the To field
+21:11:31.058 INFO  flightsbooking.BaseWindow - Switched to iframe
+21:11:31.185 INFO  utils.Utils - Waiting for 3.0 seconds
+21:11:34.291 INFO  flightsbooking.BaseWindow - Clicked on :: Clicked on Google Pay Store Icon
+21:11:36.837 INFO  flightsbooking.BaseWindow - Switched to window- MakeMyTrip Hotels, Flight, Bus - Apps on Google Play
+21:11:36.933 INFO  flightsbooking.BaseWindow - Switched to window- MakeMyTrip - #1 Travel Website 50% OFF on Hotels, Flights & Holiday

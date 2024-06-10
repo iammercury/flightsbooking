@@ -4,6 +4,8 @@ import java.io.File;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
+import java.util.Stack;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.logging.log4j.LogManager;
@@ -26,14 +28,16 @@ public class BaseWindow {
 
 	private static final Logger log = LogManager.getLogger(BaseWindow.class.getName());
 
-	WebDriver driver;
-	JavascriptExecutor js;
-	WebDriverWait wait;
+	protected WebDriver driver;
+	protected JavascriptExecutor js;
+	protected WebDriverWait wait;
+	protected Stack<String> windowStack;
 
 	public BaseWindow(WebDriver driver) {
 		this.driver = driver;
 		js = (JavascriptExecutor) driver;
 		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		windowStack = new Stack<>();
 	}
 
 	/***
@@ -107,12 +111,10 @@ public class BaseWindow {
 
 	public void clickElement(WebElement element) {
 		wait.until(ExpectedConditions.elementToBeClickable(element)).click();
-		;
 	}
 
 	public void clickElement(String locator) {
 		wait.until(ExpectedConditions.elementToBeClickable(getByType(locator))).click();
-		;
 	}
 
 	/***
@@ -443,4 +445,47 @@ public class BaseWindow {
 		}
 	}
 
+	public void scrollElementIntoView(WebElement element) {
+		js.executeScript("arguments[0].scrollIntoView(true);", element);
+	}
+
+	/** Push the original window handle onto the stack */
+	public void getMainWindowHandle() {
+		windowStack.push(driver.getWindowHandle());
+	}
+
+	// Method to switch to the latest opened window
+	public void switchToNewWindow() {
+		Set<String> allWindows = driver.getWindowHandles();
+
+		// Push new window handles onto the stack
+		for (String windowHandle : allWindows) {
+			if (!windowStack.contains(windowHandle)) {
+				windowStack.push(windowHandle);
+			}
+		}
+
+		// Switch to the latest window (top of the stack)
+		driver.switchTo().window(windowStack.peek());
+		wait.until(ExpectedConditions.javaScriptThrowsNoExceptions("return document.readyState;"));
+		log.info("Switched to window- " + driver.getTitle());
+	}
+
+	// Method to switch back to the previous window
+	public void switchToPreviousWindow() {
+		if (windowStack.size() > 1) {
+			driver.close(); // Close the current window
+			windowStack.pop(); // Remove the current window handle from the stack
+			driver.switchTo().window(windowStack.peek()); // Switch to the previous window (now top of the stack)
+			log.info("Switched to window- " + driver.getTitle());
+		}
+	}
+
+	// Method to close all windows and quit the driver
+	public void closeAllWindowsAndQuit() {
+		while (!windowStack.isEmpty()) {
+			driver.switchTo().window(windowStack.pop());
+			driver.close();
+		}
+	}
 }

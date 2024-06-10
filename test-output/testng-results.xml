@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-05-21T19:09:00 IST" name="Application Test" finished-at="2024-05-21T19:09:06 IST" duration-ms="6654">
+  <suite started-at="2024-06-10T21:11:14 IST" name="Application Test" finished-at="2024-06-10T21:11:37 IST" duration-ms="22648">
     <groups>
     </groups>
-    <test started-at="2024-05-21T19:09:00 IST" name="Regression Test" finished-at="2024-05-21T19:09:06 IST" duration-ms="6654">
+    <test started-at="2024-06-10T21:11:14 IST" name="Regression Test" finished-at="2024-06-10T21:11:37 IST" duration-ms="22648">
       <class name="com.makemytrip.flightsbooking.HomePageTest">
-        <test-method is-config="true" signature="beforeMethod(java.lang.String)[pri:0, instance:com.makemytrip.flightsbooking.HomePageTest@70e9c95d]" started-at="2024-05-21T19:09:00 IST" name="beforeMethod" finished-at="2024-05-21T19:09:04 IST" duration-ms="3898" status="PASS">
+        <test-method is-config="true" signature="beforeMethod(java.lang.String)[pri:0, instance:com.makemytrip.flightsbooking.HomePageTest@4d5650ae]" started-at="2024-06-10T21:11:14 IST" name="beforeMethod" finished-at="2024-06-10T21:11:20 IST" duration-ms="6126" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,11 +18,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="testCaseOne()[pri:0, instance:com.makemytrip.flightsbooking.HomePageTest@70e9c95d]" started-at="2024-05-21T19:09:04 IST" name="testCaseOne" finished-at="2024-05-21T19:09:06 IST" duration-ms="2392" status="PASS">
+        <test-method signature="clickGooglePlayStore()[pri:0, instance:com.makemytrip.flightsbooking.HomePageTest@4d5650ae]" started-at="2024-06-10T21:11:20 IST" name="clickGooglePlayStore" finished-at="2024-06-10T21:11:36 IST" duration-ms="16175" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testCaseOne -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.makemytrip.flightsbooking.HomePageTest@70e9c95d]" started-at="2024-05-21T19:09:06 IST" name="afterMethod" finished-at="2024-05-21T19:09:06 IST" duration-ms="328" status="PASS">
+        </test-method> <!-- clickGooglePlayStore -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.makemytrip.flightsbooking.HomePageTest@4d5650ae]" started-at="2024-06-10T21:11:36 IST" name="afterMethod" finished-at="2024-06-10T21:11:37 IST" duration-ms="295" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
