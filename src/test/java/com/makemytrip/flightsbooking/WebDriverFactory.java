@@ -59,7 +59,7 @@ public class WebDriverFactory {
 	 */
 	private ChromeOptions setChromeOptions() {
 		ChromeOptions options = new ChromeOptions();
-		options.addArguments("disable-infobars");
+		options.addArguments("--blink-settings=imagesEnabled=false");
 		return options;
 	}
 
